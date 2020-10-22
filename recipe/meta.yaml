@@ -1,5 +1,5 @@
 {% set name = "lume-genesis" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/slaclab/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 2adfa80ee897903aa1216d2cdf8a831282eb64ce0c3758f43e2e2c9297f5e729
+  sha256: 232077c10ce589995522c990b664897e933236c0581e21b75577b9252ba69ef7
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -36,7 +36,7 @@ about:
   license: APACHE-2.0
   license_family: APACHE
   license_file: LICENSE
-  summary: 'Genesis tools for use in LUME'
+  summary: Genesis tools for use in LUME
   description: |
     Genesis tools for use in LUME.
 
