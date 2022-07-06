@@ -1,5 +1,5 @@
 {% set name = "lume-genesis" %}
-{% set version = "0.2.1" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/slaclab/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 06f83da991d9d1e5fb9c2d901df0908710c077e978ab91e228b8bc2b3d9240d2
+  sha256: b4789d057521890d8ebaefdac3ff46c10ae41041e56a6476fc9ebb62a0f3785f
 
 build:
   noarch: python
@@ -20,16 +20,19 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - bokeh
-    - h5py
-    - matplotlib-base
-    - numpy
+    - lume-base
     - scipy
     - genesis2
 
 test:
   imports:
     - genesis
+  requires:
+    - pytest
+  source_files:
+    - tests 
+  commands:
+    - pytest tests    
 
 about:
   home: https://github.com/slaclab/{{ name }}
