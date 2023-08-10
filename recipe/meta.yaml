@@ -1,5 +1,5 @@
 {% set name = "lume-genesis" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/slaclab/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: b4789d057521890d8ebaefdac3ff46c10ae41041e56a6476fc9ebb62a0f3785f
+  sha256: 611e02876ae9eef8a0e5671a8f24389828856a9b53b8dcf4ad2d0f852b93bf49
 
 build:
   noarch: python
@@ -30,9 +30,9 @@ test:
   requires:
     - pytest
   source_files:
-    - tests 
+    - tests
   commands:
-    - pytest tests    
+    - pytest tests
 
 about:
   home: https://github.com/slaclab/{{ name }}
