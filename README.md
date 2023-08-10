@@ -1,11 +1,11 @@
-About lume-genesis
-==================
+About lume-genesis-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lume-genesis-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/slaclab/lume-genesis
 
 Package license: APACHE-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lume-genesis-feedstock/blob/main/LICENSE.txt)
 
 Summary: Genesis tools for use in LUME
 
