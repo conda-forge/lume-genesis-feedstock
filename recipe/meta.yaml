@@ -16,26 +16,41 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.9
     - pip
   run:
-    - python >=3.6
-    - scipy
+    - python >=3.9
+    - eval-type-backport
     - genesis2
+    - genesis4 >=4.6.6
+    - jinja2
+    - lark
     - lume-base
+    - matplotlib
+    - numpy
+    - openpmd-beamphysics
+    - prettytable
+    - psutil
+    - pydantic >2
+    - pydantic-settings
+    - scipy
+    - typing-extensions
 
 test:
   imports:
     - genesis
   requires:
     - pytest
+    - pytest-cov
   source_files:
-    - tests
+    - docs
+    - genesis
+    - pyproject.toml
   commands:
-    - pytest tests
+    - pytest -v
 
 about:
-  home: https://github.com/slaclab/{{ name }}
+  home: https://github.com/slaclab/lume-genesis
   license: APACHE-2.0
   license_family: APACHE
   license_file: LICENSE
@@ -47,3 +62,4 @@ extra:
   recipe-maintainers:
     - balticfish
     - ChristopherMayes
+    - ken-lauer
