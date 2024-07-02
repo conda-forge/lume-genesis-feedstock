@@ -42,12 +42,14 @@ test:
   requires:
     - pytest
     - pytest-cov
+    - ffmpeg
   source_files:
     - docs
     - genesis
     - pyproject.toml
   commands:
-    - pytest -v
+    # Avoid a couple tests which require a lot of memory (15.3GiB)
+    - pytest -v -k 'not particles and not profile_array'
 
 about:
   home: https://github.com/slaclab/lume-genesis
