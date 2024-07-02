@@ -26,7 +26,7 @@ requirements:
     - jinja2
     - lark
     - lume-base
-    - matplotlib
+    - matplotlib-base
     - numpy
     - openpmd-beamphysics
     - prettytable
@@ -51,7 +51,7 @@ test:
 
 about:
   home: https://github.com/slaclab/lume-genesis
-  license: APACHE-2.0
+  license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
   summary: Genesis tools for use in LUME
