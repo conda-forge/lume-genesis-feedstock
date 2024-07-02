@@ -1,5 +1,5 @@
 {% set name = "lume-genesis" %}
-{% set version = "0.6.3" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/slaclab/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 799d17d3d2d4b974c7ff416a5de6f416fda1ec58d106e62574c9d8e52e9f3a16
+  sha256: 3e1f0d876f9e158dbcefb20fe341355d2f29e698e29be9e7a33ce0233a700b49
 
 build:
   noarch: python
@@ -16,27 +16,45 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.9
     - pip
+    - setuptools_scm
   run:
-    - python >=3.6
-    - scipy
+    - python >=3.9
+    - eval-type-backport
     - genesis2
+    - genesis4 >=4.6.6
+    - jinja2
+    - lark
     - lume-base
+    - matplotlib-base
+    - numpy
+    - openpmd-beamphysics
+    - prettytable
+    - psutil
+    - pydantic >2
+    - pydantic-settings
+    - scipy
+    - typing-extensions
 
 test:
   imports:
     - genesis
   requires:
     - pytest
+    - pytest-cov
+    - ffmpeg
   source_files:
-    - tests
+    - docs
+    - genesis
+    - pyproject.toml
   commands:
-    - pytest tests
+    # Avoid a couple tests which require a lot of memory (15.3GiB)
+    - pytest -v -k 'not particles and not profile_array'
 
 about:
-  home: https://github.com/slaclab/{{ name }}
-  license: APACHE-2.0
+  home: https://github.com/slaclab/lume-genesis
+  license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
   summary: Genesis tools for use in LUME
@@ -47,3 +65,4 @@ extra:
   recipe-maintainers:
     - balticfish
     - ChristopherMayes
+    - ken-lauer
