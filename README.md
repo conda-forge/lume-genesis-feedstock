@@ -148,4 +148,5 @@ Feedstock Maintainers
 
 * [@ChristopherMayes](https://github.com/ChristopherMayes/)
 * [@balticfish](https://github.com/balticfish/)
+* [@ken-lauer](https://github.com/ken-lauer/)
 
