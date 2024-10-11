@@ -24,6 +24,7 @@ requirements:
     - eval-type-backport
     - genesis2
     - genesis4 >=4.6.6
+    - h5py
     - jinja2
     - lark
     - lume-base
