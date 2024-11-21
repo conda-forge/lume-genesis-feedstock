@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -23,7 +23,7 @@ requirements:
     - python >=3.9
     - eval-type-backport
     - genesis2
-    - genesis4 >=4.6.6
+    - genesis4 >=4.6.7
     - h5py
     - jinja2
     - lark
