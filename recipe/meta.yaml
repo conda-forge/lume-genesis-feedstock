@@ -16,11 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
+    - setuptools
     - setuptools_scm
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - eval-type-backport
     - genesis2
     - genesis4 >=4.6.7
@@ -42,6 +43,7 @@ test:
   imports:
     - genesis
   requires:
+    - python {{ python_min }}
     - pytest
     - pytest-cov
     - ffmpeg
