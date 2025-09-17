@@ -9,4 +9,4 @@ docker_image:
 ffmpeg:
 - '7'
 python_min:
-- '3.9'
+- '3.10'
