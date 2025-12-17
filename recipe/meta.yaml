@@ -1,6 +1,6 @@
 {% set name = "lume-genesis" %}
-{% set version = "1.3.6" %}
-{% set python_min = "3.9" %}
+{% set version = "1.3.7" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/slaclab/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 20309887378fc6173c8a459d65cc970c31bfd842e5b7c510505df9fb62343716
+  sha256: dafba80c3493930846ccd6cb69c2479388f558a64a5301a3b83ad0d09a541f44
 
 build:
   noarch: python
@@ -32,7 +32,7 @@ requirements:
     - lume-base
     - matplotlib-base
     - numpy
-    - openpmd-beamphysics
+    - openpmd-beamphysics >=0.11.0
     - prettytable
     - psutil
     - pydantic >=2.7
