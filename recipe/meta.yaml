@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://github.com/slaclab/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 4c41b7162c6ecb2fc2e1f0cf8a6416a04f5123f83927bf364cc2ccb3d27d27ce
+  sha256: a1738a4d6c1ce43f609992781351c48fef85b78621ced7682c49b27342b46890
 
 build:
   noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 1
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
