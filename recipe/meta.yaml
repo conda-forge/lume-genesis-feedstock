@@ -1,5 +1,5 @@
 {% set name = "lume-genesis" %}
-{% set version = "1.3.8" %}
+{% set version = "1.3.9" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/slaclab/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 4c41b7162c6ecb2fc2e1f0cf8a6416a04f5123f83927bf364cc2ccb3d27d27ce
+  sha256: 440649eaa9c668aa4a2cd4d41985aa1e23bd6c26d3314d0f7516516e0c13a670
 
 build:
   noarch: python
