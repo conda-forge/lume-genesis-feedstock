@@ -23,19 +23,18 @@ requirements:
     - setuptools_scm
   run:
     - python >={{ python_min }}
-    - eval-type-backport
     - genesis2
-    - genesis4 >=4.6.7
+    - genesis4 >=4.6.12
     - h5py
     - jinja2
     - lark
     - lume-base
     - matplotlib-base
     - numpy
-    - openpmd-beamphysics >=0.11.0
+    - openpmd-beamphysics >=0.14.1
     - prettytable
     - psutil
-    - pydantic >=2.7
+    - pydantic >=2.12.0
     - pydantic-settings
     - scipy
     - typing-extensions
