@@ -1,5 +1,5 @@
 {% set name = "lume-genesis" %}
-{% set version = "1.3.9" %}
+{% set version = "1.4.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://github.com/slaclab/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 440649eaa9c668aa4a2cd4d41985aa1e23bd6c26d3314d0f7516516e0c13a670
+  sha256: 43c8b786e71efb739e211e974a3c822eb741aab72c0f2f4fef482c2c6e2a2b5e
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -23,19 +23,19 @@ requirements:
     - setuptools_scm
   run:
     - python >={{ python_min }}
-    - eval-type-backport
     - genesis2
-    - genesis4 >=4.6.7
+    - genesis4 >=4.6.12
     - h5py
     - jinja2
     - lark
     - lume-base
     - matplotlib-base
     - numpy
-    - openpmd-beamphysics >=0.11.0
+    - openpmd-beamphysics >=0.14.1
+    - ormsgpack
     - prettytable
     - psutil
-    - pydantic >=2.7
+    - pydantic >=2.12.0
     - pydantic-settings
     - scipy
     - typing-extensions
