@@ -24,7 +24,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - genesis2
-    - genesis4 >=4.6.12
+    - genesis4 >=4.6.14
     - h5py
     - jinja2
     - lark
