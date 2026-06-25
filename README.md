@@ -19,7 +19,9 @@ Current build status
 <table><tr>
     <td>All platforms:</td>
     <td>
-      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+      <a href="https://github.com/conda-forge/lume-genesis-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/lume-genesis-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
     </td>
   </tr>
 </table>
@@ -148,7 +150,4 @@ Feedstock Maintainers
 * [@ChristopherMayes](https://github.com/ChristopherMayes/)
 * [@balticfish](https://github.com/balticfish/)
 * [@ken-lauer](https://github.com/ken-lauer/)
-
-
-<!-- dummy commit to enable rerendering -->
 
