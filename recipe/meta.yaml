@@ -1,5 +1,5 @@
 {% set name = "lume-genesis" %}
-{% set version = "1.4.3" %}
+{% set version = "1.4.4" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/slaclab/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 26132e542dba1906e7a36be72ce13ed93bad7576c459577b1431c7d97b049c1b
+  url: https://github.com/lume-science/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: 77123a721b384e9a0fba4ab37840b810bbea207973ed32b03932294dd0b34f23
 
 build:
   noarch: python
@@ -57,7 +57,7 @@ test:
     - pytest -v -k 'not particles and not profile_array'
 
 about:
-  home: https://github.com/slaclab/lume-genesis
+  home: https://github.com/lume-science/lume-genesis
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
