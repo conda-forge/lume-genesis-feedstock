@@ -3,7 +3,7 @@ About lume-genesis-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lume-genesis-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/slaclab/lume-genesis
+Home: https://github.com/lume-science/lume-genesis
 
 Package license: Apache-2.0
 
@@ -43,31 +43,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `lume-genesis` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install lume-genesis
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install lume-genesis
 ```
 
-It is possible to list all of the versions of `lume-genesis` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add lume-genesis
+# for installing globally
+pixi global install lume-genesis
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `lume-genesis` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search lume-genesis --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search lume-genesis --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search lume-genesis --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -79,6 +121,8 @@ mamba repoquery whoneeds lume-genesis --channel conda-forge
 # List dependencies of `lume-genesis`:
 mamba repoquery depends lume-genesis --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
